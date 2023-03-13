@@ -1,0 +1,92 @@
+.box{
+  display: inline-block;
+  vertical-align: middle;
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.ex1 .box{
+  display: none;
+}
+
+.ex2 .box{
+  display: none;
+}
+.box div{
+  height: 100%;
+  background: yellow;
+}
+
+.ex3 .box div{
+  display: none;
+}
+
+.ex4 .box div{
+  display: none;
+}
+
+section.tab{
+  width: 500px;
+  margin: 30px auto;
+  border: 1px solid black;
+}
+
+section.tab div.tab_menu{
+  display: flex;
+  height: 40px;
+  background: red;
+}
+
+section.tab div.tab_menu button{
+  flex: 1;
+  background: #EEE;
+  border: 1px solid black;
+  cursor: pointer;
+}
+
+section.tab .pane:not(.pane1){
+  display: none;
+}
+
+section.tab div.tab_menu button.active{
+  background: black;
+  color: #FFF;
+  font-weight: bold;
+}
+
+ul,li{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a{
+  text-decoration: none;
+}
+
+.menu{
+  width: 200px;
+  border: 1px solid black;
+}
+
+.menu>ul>li>a{
+  display: block;
+  padding: 15px;
+  background: #000;
+  color: #FFF;
+}/* 1depth */
+
+.menu>ul>li>ul>li>a{
+  display: block;
+  padding: 10px;
+  background: #ddd;
+}/* 2depth */
+
+.menu>ul>li>ul{
+  display: none;
+}
+
+.menu>ul>li>a.active{
+  background: red;
+}

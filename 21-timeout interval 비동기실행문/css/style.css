@@ -1,0 +1,43 @@
+.ex8{
+  width: 300px;
+  margin: 30px auto;
+  border: 1px solid black;
+}
+
+.ex8 div{
+  position: relative;
+  left: 0; 
+  width: 50px;
+  height: 50px;
+  background: red;
+  transition: left 1s;
+} /* left 움직이려면 계속 변해야 한다 
+프로퍼티값이 계속 변할 때는 스크립트 css를 사용해야 한다 */
+
+
+.ex9{
+  
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  border: 5px solid black;
+}
+
+.ex9 img:not(.img1){
+  display: none;
+}
+
+.ex10{
+  width: 300px;
+  margin: 30px auto;
+  border: 1px solid black;
+}
+
+.ex10 div{
+  position: relative;
+  left: 0; 
+  width: 50px;
+  height: 50px;
+  background: red;
+  transition: left 1s;
+}

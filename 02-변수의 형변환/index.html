@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+</head>
+
+<body>
+  <script>
+    /* 
+      a = '1.2345'
+      parseInt( a ) -> 1
+
+      a = '5입니다'
+      parseInt( a ) -> 5
+
+      a = '숫자5'
+      parseInt( a ) -> NaN
+    */
+
+    /* var a = prompt('첫번째 숫자를 입력하세요')
+    var b = prompt('두번째 숫자를 입력하세요')
+    var c = parseInt(a) + parseInt(b)
+    alert(c) 
+    */
+
+    /*
+    var a = parseInt(prompt('첫번째 숫자를 입력하세요'))
+    var b = parseInt(prompt('두번째 숫자를 입력하세요'))
+    var c = a + b
+    alert(c) 
+    */
+ 
+    /*  
+    var a = prompt('첫번째 정수나 소수를 입력하세요')
+    var b = prompt('두번째 정수나 소수를 입력하세요')
+    var c = parseFloat(a) + parseFloat(b)
+    alert(c) 
+    */
+
+    /* 나머지 구하기 예제
+    var a = prompt('나누어질 수(정수)를 입력하세요') //14
+    var b = prompt('나눌수(정수)를 입력하세요') //5
+    var c = parseInt(a / b)
+    var d = a - b * c
+    alert(d)
+    //4
+    */
+
+    /* 
+    var a = prompt('나누어질 수(정수)를 입력하세요') //14
+    var b = prompt('나눌수(정수)를 입력하세요') //5
+    var c = a % b 
+    */
+
+    /* 
+    var a = prompt('가지고 있는 금액을 입력하세요') //1000
+    var b = prompt('물건 가격을 입력하세요') //300
+    var c = parseInt(a / b)
+    var d = a % b
+    alert('구입가능갯수 : '+c+'개, 잔돈 : '+d+'원')
+
+    //구입가능갯수 : 3 , 잔돈 : 100 
+    */
+
+    /* 평균구하기 
+    var 국어 = parseInt(prompt('국어점수를 입력하세요')) //40
+    var 영어 = parseInt(prompt('영어점수를 입력하세요')) //30
+    var 수학 = parseInt(prompt('수학점수를 입력하세요')) //30
+    var 총점 = 국어 + 영어 + 수학
+    var 평균 = parseInt((총점 / 3)*10) / 10
+    alert('총점은 '+총점+'점, 평균은 '+평균+'점')
+    //총점은 100점, 평균은 33.3점
+    */
+
+    /*  
+    var 컨테이너넓이 = prompt('컨테이너 넓이를 입력하세요') //1000
+    var 그리드갯수 = prompt('그리드 갯수를 입력하세요') //3 
+    var 그리드넓이 = prompt('그리드 넓이를 입력하세요') //300
+    var 총여백 = 컨테이너넓이 - 그리드갯수*그리드넓이 //2
+    var 여백하나넓이 = 총여백 / (그리드갯수 - 1) 
+    */
+
+    /* 
+    var 컨테이너넓이 = prompt('컨테이너넓이를 입력하세요') //1000
+    var 여백한칸의넓이 = prompt('여백한칸의넓이를 입력하세요') //50
+    var 여백의갯수 = prompt('여백의갯수를 입력하세요') //2
+    var 그리드전체넓이 = (컨테이너넓이 - 여백한칸의넓이 * 여백의갯수)
+    var 그리드하나의넓이 = 그리드전체넓이 / (여백의갯수+1)
+    alert(그리드하나의넓이) 
+    */
+
+    a = 1.2345
+    a.toFixed(1) //1.2
+
+    var a = prompt('첫번째수를입력') //50
+    var b = prompt('두번째수를입력') //100
+    var c = a/b*100
+  
+    alert(a+'은 '+b+'의 '+c+'%입니다') //50은 100의 50%입니다
+
+  </script>
+</body>
+</html>

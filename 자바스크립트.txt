@@ -1,0 +1,1307 @@
+01 변수
+선언과 호출이 반드시 필요하다.
+변수는 호출 전 선언이 필요함.
+상수를 이용해서 변수를 선언할 수 없음
+예약어를 변수로 사용할 수 없음
+false (undefined, null, NaN)
+문자형 변수와 숫자형 변수를 더하면 이어붙인 후 문자형으로 변환한다 (나머지 연산자는 숫자로 계산한다)
+값은 연산자로 이어붙여야만 한다
+
+변수 하나에는 값 하나만 들어간다.
+
+var
+undefined 값이 없다. 에러가 아니다.
+null 값이 없다는 값. 아무것도 아니다. 코딩할 때 강제로 내가 빈값을 넣다. 예약어
+undefined, null 뜻은 비어있다.
+숫자를 마음대로 변수로 쓸 수 없다.
+
+NaN 숫자도 아니다. 숫자를 도출할 수 없다. 말도 안 되는 연산을 했을 때 나오는 값.
+
+
+
+
+<script> 안에서 주석
+// 한줄 주석
+/* 멀티 주석 */
+
+var a = 1
+선언한다.
+a
+호출한다. 찾는다.
+
+
+a a박스를 연다.
+a = 1 a안에 1을 넣어라.
+
+같은 박스 두 번 만들면 안 된다. var a = 1 
+                                           var b = 1
+                                          var a = a + b
+
+'1' 문자열, 글자
+검은색 나오면 글자다. console.log로 확인 개발자도구 console에서 확인
+파란색으로 나오면 숫자
+더하기일 때 이어 붙인다.
+a,b a도 찍어보고 b도 찍어봐라.
+a 1 값을 따로따로 안 되고 연산자로 반드시 이어 붙여야 한다.
+
+var a = '사과'
+var b = '바나나'
+
+var c = a
+
+a = b
+b= c 
+
+console.log(a, b);
+
+var, undefined, null, NaN
+----------------------------
+02 변수의 형변환
+
+
+script는 html 어디에서 작성하든 아무 상관이 없다.
+css는 꼭 head 안에서 만든다.
+log 콘솔창에 값 출력
+console.log는 화면 출력
+
+defined 없다.
+
+메소드 어떤 특정 기능을 한다.
+
+alert() 팝업창 출력, 알림창, 경고창
+alert(a , b) 쉼표는 뒤에 값이 안 나온다.
+띄어쓰기
+값과 값은 무조건 이어붙여야 한다.
+
+문자열은 따옴표 
+alert(a + ',' + b)
+
+문자열 이어붙이기
+<body>
+  <script>
+    
+    var a = 5
+    var b = 1
+    var c = a + b
+    //alert(a + '더하기' + b + '은' + c)
+    //alert(a + '+' + b + '=' + c) // 5 + 1 = 6, 5 더하기 1 은 6
+
+  </script>
+</body>
+</html>
+
+
+
+ var a = 5
+    var b = 1
+    var c = a + b
+    //alert(a+'더하기 '+b+'은 '+c+'입니다')
+    alert(a+'+'+b+'='+c)
+
+드래그 후 따옴표 '+변수+'
+'+c+'
+
+<body>
+  <script>
+    
+    var a = 5
+    var b = 1
+    var c = a + b
+   //a가 5이고 b가 1이면 합은 6입니다
+   alert('a가 '+a+'이고 b가 '+b+'이면 합은 '+c+'입니다')
+  </script>
+</body>
+
+
+인터렉티브 - 사용자와 교감
+alert() 
+prompt() 반환하는 메소드 (리턴) 
+
+= 집어 넣겠다
+변수가 박스
+리턴 뱉어내다 싸지른다
+
+parseInt() 정수로 바꾸겠다 숫자로 바꿔준다
+
+ /* 
+      a = '5'
+      parseInt(a) -> 5
+
+      parseInt('5') -> 5
+    */
+
+      a = '5'
+      b = '1'
+
+      parseInt( a+b ) -> 51
+
+parseInt() 사용하면  
+숫자 뒤쪽에 글이 나오면 글은 무시되고 숫자만 나온다.
+앞쪽에 있는 글은 못 뜯어낸다 NaN이 나옴
+Int 정수만 가져온다. 소수점 버림
+
+parseInt 글자처럼 보이는 숫자를 정수로 바꾼다.
+문자열 안에 있는 수를 정수로 바꾼다
+소수점을 정수로 바꾼다
+글자가 있으면 뜯어낸다 글자가 뒤에 있을 때 
+
+   /* 
+      a = '1.2345'
+      parseInt( a ) -> 1
+
+      a = '5입니다'
+      parseInt( a ) -> 5
+
+      a = '숫자5'
+      parseInt( a ) -> NaN
+
+    */
+
+
+
+
+    var a = prompt('첫번째 숫자를 입력하세요')
+    var b = prompt('두번째 숫자를 입력하세요')
+    var c = parseInt(a) + parseInt(b)
+    alert(c)
+
+    var a = parseInt(prompt('첫번째 숫자를 입력하세요'))
+    var b = parseInt(prompt('두번째 숫자를 입력하세요'))
+    var c = a + b
+    alert(c)
+
+parseFloat 소수점까지 더할 경우
+
+    var a = prompt('첫번째 정수나 소수를 입력하세요')
+    var b = prompt('두번째 정수나 소수를 입력하세요')
+    var c = parseFloat(a) + parseFloat(b)
+    alert(c)
+
+
+더하기 빼고 연산자는 자동으로 숫자로 계산해줌
+
+    /* 나머지 구하기 예제*/
+    var a = prompt('나누어질 수(정수)를 입력하세요') //14
+    var b = prompt('나눌수(정수)를 입력하세요') //5
+    var c = parseInt(a / b)
+    var d = a - b * c
+    alert(d) 
+
+나머지 연산자 (%)
+var c = a % b
+
+
+    var a = prompt('나누어질 수(정수)를 입력하세요') 
+    var b = prompt('나눌수(정수)를 입력하세요') 
+    var c = a % b
+
+    
+
+    var a = prompt('가지고 있는 금액을 입력하세요') //1000
+    var b = prompt('물건 가격을 입력하세요') //300
+    var c = parseInt(a / b)
+    var d = a % b
+    alert('구입가능갯수 : '+c+', 잔돈 : '+ d)
+    //구입가능갯수 : 3 , 잔돈 : 100
+
+
+    /* 평균구하기 */
+    var 국어 = parseInt(prompt('국어점수를 입력하세요')) //40
+    var 영어 = parseInt(prompt('영어점수를 입력하세요')) //30
+    var 수학 = parseInt(prompt('수학점수를 입력하세요')) //30
+    var 총점 = 국어 + 영어 + 수학
+    var 평균 = parseInt((총점 / 3)*10) / 10
+    alert('총점은 '+총점+'점, 평균은 '+평균+'점')
+    //총점은 100점, 평균은 33.3점
+
+a = 1.2345
+    a.toFixed(1) //1.2
+
+
+문제 풀이 
+    /*  
+    var 컨테이너넓이 = prompt('컨테이너 넓이를 입력하세요') //1000
+    var 그리드갯수 = prompt('그리드 갯수를 입력하세요') //3 
+    var 그리드넓이 = prompt('그리드 넓이를 입력하세요') //300
+    var 총여백 = 컨테이너넓이 - 그리드갯수*그리드넓이 //2
+    var 여백하나넓이 = 총여백 / (그리드갯수 - 1) 
+
+    var 컨테이너넓이 = prompt('컨테이너넓이를 입력하세요') //1000
+    var 여백한칸의넓이 = prompt('여백한칸의넓이를 입력하세요') //50
+    var 여백의갯수 = prompt('여백의갯수를 입력하세요') //2
+    var 그리드전체넓이 = (컨테이너넓이 - 여백한칸의넓이 * 여백의갯수)
+    var 그리드하나의넓이 = 그리드전체넓이 / (여백의갯수+1)
+    alert(그리드하나의넓이)
+
+a = 1.2345
+    a.toFixed(1) //1.2
+
+alert, prompt, %연산자, toFixed()
+
+
+*문제*
+    var a = prompt('첫번째수를입력') //50
+    var b = prompt('두번째수를입력') //100
+    alert() //50은 100의 50%입니다 
+나오게 만들기
+
+    var a = prompt('첫번째수를입력') //50
+    var b = prompt('두번째수를입력') //100
+    var c = a/b*100
+    alert(a+'은 '+b+'의 '+c+'%입니다') //50은 100의 50%입니다
+
+----------------------------
+03 이벤트, 변수의호출과 출력,함수
+
+이벤트
+반응을 유도한다.
+클릭할 때.
+사용자와 상호작용
+
+button 버튼 누르는 의미
+UI 유저 인터페이스
+~를 했을 때 ~를 한다.
+1.바닐라 스크립트(문법) - 오리지널, 가공이 안 됐다.
+2.J쿼리 - javascript 개조한 것.
+
+<script src="https://code.jquery.com/jquery-latest.js"></script>
+스크립트 소스를 받아온다.
+외부주소에서. 
+CDN - 배달해준다.
+j쿼리 연동해서 받아왔다, j쿼리 쓰겠다.
+문법 쉽게 개조 - 라이브러리
+
+순서대로 읽는다.
+순서가 있다.
+라이브러리 (도서관) 사전을 다운 받고나서 써야 한다.
+
+스크립트 외부에서 만든다.
+html에서 불러와야 함.
+src 연동하는 속성
+./ 같은 방 안에 있는 파일 연결하겠다
+
+<!-- external script -->
+<script src="./script.js"></script>
+
+
+$() : jQuery 약자
+엘리먼트를 찾겠다.
+$('문자열')
+문자열로 찾아야함. 안 그러면 변수를 찾는다.
+
+button = 'button'
+$(button)
+
+$('button').click()
+이벤트 - 특정 시점
+때, 언제를 말한다.
+.click() 
+때
+function 수행해야 할 일들 callback
+.click(function) 
+클릭이 완료됐을 때 할 일.
+function(){}
+할 일을 함수라고 한다.
+.click(function(){}) 
+
+callback
+
+css와 자바스크립트와 선택자가 같다.
+
+
+// event, callback function
+$('.ex1 button').click(function(){
+  alert(1)
+})
+
+$('.ex2 button').click(function(){
+  alert(2)
+})
+
+
+
+input 입력 폼이 생김
+사용자가 입력하고 바꿀 수 있는 거 
+<input type="text">
+
+
+선택 
+$('input') 선택
+.val() 입력폼에서만 값을 가져옴
+
+
+$('.ex1 button').click(function(){
+  var 숫자1 = parseInt($('.ex1 .num1').val())
+  var 숫자2 = parseInt($('.ex1 .num2').val())
+  var 합 = 숫자1 + 숫자2
+  alert(합)
+})
+
+var 변수를 만든다.
+안에서부터 밖으로 찾는다.
+function 기준  안에서 먼저 찾는 기능.
+변수는 안쪽부터 찾는다.(function 기준으로, 함수 기준)
+
+스코프 범위
+변수의 범위를 만든다 var
+
+name 같은 이름 부여를 해야 하나만 선택됨
+<input value="1" type="radio" name="ex3">
+내가 출력값을 입력해야함.
+
+:checked 체크가 된 것 가상클래스
+
+<div class="ex3">
+    <p>3. 가격구하기</p>
+    <p>
+    <input value="1000" type="radio" name="ex3"> 신발
+    <input value="2000" type="radio" name="ex3"> 가방
+    <input value="3000" type="radio" name="ex3"> 모자
+    </p>
+    <p>
+      <input class="cnt" type="text"> 개
+    </p>
+    <button>버튼</button>
+  </div>
+
+$('.ex3 button').click(function(){
+  var 상품가격 = $('.ex3 input:checked').val()
+  var 상품갯수 = $('.ex3 .cnt').val()
+  var 총가격 = 상품가격 * 상품갯수
+  alert(총가격)
+})
+
+
+$('.ex4 button').click(function(){
+  var 숫자1 = parseInt($('.ex4 .num1').val())//5
+  var 숫자2 = parseInt($('.ex4 .num2').val())//3
+  var 더하기 = 숫자1 + 숫자2
+  var 빼기 = 숫자1 - 숫자2
+  var 곱하기 = 숫자1 * 숫자2
+  var 나누기 = (숫자1 / 숫자2).toFixed(2)
+
+  alert(숫자1+'+'+숫자2+'='+더하기+', '+숫자1+'-'+숫자2+'='+빼기+','+숫자1+'*'+숫자2+'='+곱하기+', '+숫자1+'/'+숫자2+'='+나누기)
+//5+3=8, 5-3=2,5*3=15, 5/3=1.66
+
+
+함수의 사용 목적
+1. 어떤 일을 하는지 알기 쉽다.
+2. 수정관리가 용이하다. 반복해서 사용하는데 도움이 된다. 가독성 높음.
+한꺼번에 수정하기 위해
+함수를 선언 
+함수function(파라미터){} 
+ex) 사용자정의함수 function 이름(){}
+ 호출할 때는 ()사용
+
+함수를 만들고 파라미터를 만든다
+변하는 부분을 파라미터로 만든다
+
+function 
+습관적으로 만들어 써야 한다.
+
+----------------------------
+04 이벤트&함수&객체
+
+<input type="number">
+숫자 패드, 핸드폰 번호
+
+val() 폼요소에만 사용할 수 있는 명령어.
+
+.html() 내용을 바꾸고 싶다
+폼요소 아닌 것들 내용을 가져온다.
+
+return 함수가 할일이 끝나고 종료했다. 
+리턴 쓰고 아래에 써도 소용이 없음
+여러 개를 못 보낸다.
+
+하나의 변수에 여러 개의 정보를 저장할 수 있는 변수.
+var 학생1 = {
+  이름 : '홍길동',
+  나이 : '20',
+  성별 : '남'
+}
+이걸 객체라고 부른다.
+변수 하나에 여러 값을 입력하기 위해, 데이터관리 목적
+
+변수에는 
+1.일반 변수
+2.객체형 변수
+3.배열형 변수
+
+객체 {}
+이름 키(키 네임) : '키값' 키밸류  
+ex) 더하기, 
+     더하기 : 더하기,
+같은 말 사용시 하나로 줄일 수 있다.
+
+키값과 변수명이 똑같다.
+
+
+function 계산(수1, 수2){
+  var 수1 = parseInt(수1)
+  var 수2 = parseInt(수2)
+  var 더하기 = 수1+수2
+  var 빼기 = 수1-수2
+  var 곱하기 = 수1*수2
+  var 나누기 = (수1/수2).toFixed(2)
+  var 객체 = {
+    더하기,
+    빼기,
+    곱하기,
+    나누기,
+  }
+return 객체
+
+$('.ex2 .div1 button').click(function(){
+  var 숫자1 = $('.ex2 .div1 .num1').val()
+  var 숫자2 = $('.ex2 .div1 .num2').val()
+  //var 객체 = 계산(숫자1, 숫자2)
+  var {더하기,곱하기} = 계산(숫자1, 숫자2) 
+  $('.ex2 .div1 .output').html(더하기+','+곱하기)
+})
+
+ var {더하기,빼기,곱하기,나누기} = 계산(숫자1, 숫자2)
+  $('.ex2 .div1 .output').html(더하+','+곱하기)
+
+
+{} 중괄호- 변수 이름으로 사용할 수 없음
+객체하고 관련돼 있다.
+구조 분해할당, destructuring
+분해해서 사용 
+그러면 객체.을 사용할 필요가 없음
+
+
+function 합계(국어,영어,수학){
+  var 국어 = parseInt(국어)
+  var 영어 = parseInt(영어)
+  var 수학 = parseInt(수학)
+  var 국영총점 = 국어+영어
+  var 국영평균 = (국어+영어)/2
+  var 영수총점 = 영어+수학
+  var 영수평균 = (영어+수학)/2
+  var 객체 = {
+    국영총점,
+    국영평균,
+    영수총점,
+    영수평균,
+  }
+  return 객체
+}
+
+$('.ex3 .div1 button').click(function(){
+  var 국어 = $('.ex3 .div1 .num1').val()
+  var 영어 = $('.ex3 .div1 .num2').val()
+  var 수학 = $('.ex3 .div1 .num3').val()
+  var {국영총점,국영평균} = 합계(국어,영어,수학)
+  $('.ex3 .div1 .output').html(국영총점+','+국영평균)
+})
+
+$('.ex3 .div2 button').click(function(){
+  var 국어 = $('.ex3 .div2 .num1').val()
+  var 영어 = $('.ex3 .div2 .num2').val()
+  var 수학 = $('.ex3 .div2 .num3').val()
+  var {영수총점,영수평균} = 합계(국어,영어,수학)
+  $('.ex3 .div2 .output').html(영수총점+','+영수평균)
+})
+
+function 가격(상품가격,상품색,갯수){
+  var a = 상품가격
+  var b = 상품색
+  var c = 갯수
+  var 합 = a*c + b*c
+  return 합
+}
+
+$('.ex4 .div1 button').click(function(){
+  var 상품가격 = $('.ex4 .div1 .n1 input:checked').val()
+  var 상품색 = $('.ex4 .div1 .n2 input:checked').val()
+  var 갯수 = $('.ex4 .div1 .num1').val()
+  var 합 = 가격(상품가격,상품색,갯수)
+  $('.ex4 .div1 p:last-child').html(합)
+})
+
+----------------------------
+script를 head에 위에 적는 이유 - 웹사이트 관리가 쉬워서 제작방식 때문에
+위에서부터 아래로 웹브라우저가 읽음 
+차례대로 읽는 방법 동기방식
+
+비동기 이벤트
+문서의 흐름 순서를 바꿈 
+$(document) 문서를 말한다. 예약어 미리 정해진 말
+순서를 구애 받지 않기 위해 사용한다.
+엘리먼트를 찾기 위해서 사용한다.
+
+$(document).ready()
+읽었을 때
+브라우저가 내용을 다 읽었을 때를 말한다.
+랜더링 시점 
+문서를 출력할 준비가 다 됐을 때
+
+화면 출력 = 랜더링
+ready()
+
+$(document).ready(function(){
+  
+}) //ready
+
+ready 이벤트
+하나만 작성 후 그 안에다 쓰면 됨
+
+$(document).ready(function(){
+  $('button').click(function(){
+    alert()
+  })
+}) //ready
+
+
+$('.section1 .article1 .output').text(sum)
+출력할 때 html과 text 차이점
+.html(태그까지 넣을 수 있음) 괄호안에 태그까지 넣을 수 있음
+.text() 괄호안에 글자만 넣고 싶으면
+
+`` -문자열은 문자열인데 변수하고 글자하고 이어붙이는 새로운 문법, 탬플릿 표현식
+``를 사용함으로써 엔터를 쳐서 표현 가능함 
+
+${obj.sum} 변수를 의미 
+
+출력할 때 
+$('.section1 .article1 .output').text(`${obj.sum},${obj.sub},${obj.multi},${obj.divide}`)
+
+ $('.section1 .article1 .output').text(`
+    더하기:${obj.sum},빼기:${obj.sub},곱하기:${obj.multi},나누기:${obj.divide}
+    `)
+
+   $('.section1 .article2 button').click(function(){
+    var num1 = $('.section1 .article2 .p1 input:checked').val()
+    var num2 = $('.section1 .article2 .p2 input:checked').val()
+    var {sum,sub,multi,divide} = fn1(num1,num2)
+    $('.section1 .article2 .output').text(`
+    더하기:${sum}, 빼기:${sub}, 곱하기:${multi},나누기:${divide}
+    `)
+  })
+
+<input type="number" value="0">
+디폴트 밸류가 들어간다 (폼요소에만 사용가능)
+
+$('.ex2 input').change
+폼요소에만 사용가능 .change 이벤트는
+포커스가 옮길 때 발생
+
+input 이벤트
+$('.ex2 input').input(function(){
+ 
+  })
+
+
+bind 이벤트를 연결하겠다
+$('.ex2 input').bind(function(){
+  
+  })
+ $('.ex2 input').bind('click',function(){
+    
+  })
+
+
+$('.ex2 input').bind('input',function(){
+    
+  })
+입력할때마다 사건이 발생
+폼요소 text나 number 사용자가 입력하는 거에만 사용 가능 
+
+<select></select>
+반드시 옵션을 넣어줘야 함
+
+
+<input value="0" type="radio" checked>
+checked="checked"가 기본값이라 checked라고만 적어도 됨
+
+똑같은 코드를 쓰지 않도록 함수 사용
+
+----------------------------
+폼요소(input, select)에만 value 사용할 수 있음
+
+console.log(prd_price, option_price, cnt);
+
+
+중첩함수
+
+function fn(n,gender){
+    var prd_price = parseInt($(`.ex${n} .prd input:checked`).val())
+    var option_price = parseInt($(`.ex${n} .option select`).val())
+    var cnt = parseInt($(`.ex${n} .cnt input`).val())
+    var price = (prd_price + option_price) * cnt
+    $(`.ex${n} .output`).html(`${gender}성의류 : ${price}원`)
+    return price
+  }
+
+  function total(){
+    var price1 = fn(1,'남')
+    var price2 = fn(2,'여')
+    var total_price = price1 + price2
+    $('.total').html(`총가격 : ${total_price}원`)
+  }
+
+  $('.ex1 .prd input, .ex1 .option select').change(function(){
+    total()
+  })
+
+  $('.ex1 .cnt input').bind('input',function(){
+    total()
+  })
+
+  $('.ex2 .prd input, .ex2 .option select').change(function(){
+    total()
+  })
+
+  $('.ex2 .cnt input').bind('input',function(){
+    total()
+  })
+
+<head>
+스타일 호출 후 스크립트 호출
+</head>
+
+$('.ex1 button').css({'':''}) 
+css() inline style을 적용함(스크립트에서)
+css 객체
+
+
+ $('.ex1 button').click(function(){
+    $('.ex1 button').css({'color':'red'})
+  })
+스크립트에서 css 명령어 적용하면 인라인 스타일 적용됨 
+인라인 스타일을 이용함
+
+
+.ex1 button{
+  color: blue !important;
+}
+
+css 스타일에서 스크립트에서 적용한 인라인 스타일보다 
+!important로 우선순위를 제일 높게 적용해야 된다.(인라인스타일보다)
+인라인 스타일을 적용 안 되게 하고 싶을 때 사용!
+
+$('.ex1 button').css({'':''})
+
+.css({'':''})
+css관련한 메소드
+{'':''} 객체다
+계속 변화해야 할 때(변화가 반복적으로)
+랜덤하게 하거나(복잡하게 사용해야 할 때)
+클래스를 많이 만들어야 하면 css를 사용한다.
+
+
+
+$('.ex2 button').click(function(){
+    $('.ex2 .box').css({
+      'width' : '100px',
+      'height' : '100px',
+      'background' : 'red',
+      'border-radius' : '50%'
+    })
+  })
+->인라인 스타일 적용됨
+
+.ex3.tt
+ex3이면서 tt인 애
+컴바인 선택자
+
+
+$('.ex3 button').click(function(){
+    $('.ex3 .box').addClass('tt')
+  })
+
+클래스 관련한 속성
+addClass 
+엘리먼트에 추가
+
+$('.ex3 .btn1').click(function(){
+    $('.ex3 .box').addClass('tt')
+  })
+
+  $('.ex3 .btn2').click(function(){
+    $('.ex3 .box').removeClass('tt')
+  })
+
+  $('.ex3 .btn3').click(function(){
+    $('.ex3 .box').toggleClass('tt')
+  })
+
+토글 - 클래스 리스트 (클래스 명령어를 이용해야 한다)
+addClass
+removeClass
+toggleClass
+
+css로 클래스 모양을 미리 만든다.
+스크립트로는 뗐다 붙였다만 한다.
+정적인 변화는 클래스로 사용
+
+
+
+
+
+버튼을 눌렀을 시 상하로, 일렬로
+$('.ex4 .btn4').click(function(){
+    $('.ex4 div').css({'display':'block'})
+  })
+
+  $('.ex4 .btn5').click(function(){
+   $('.ex4 div').css({'display':'inline-block'})
+  })
+
+
+.ex4 div{
+  width: 100px;
+  height: 100px;
+  border: 1px solid black;
+}
+
+.ex4 div.tt{
+  display: inline-block;
+
+}
+
+$('.ex4 .btn4').click(function(){
+    $('.ex4 div').removeClass('tt')
+  })
+
+  $('.ex4 .btn5').click(function(){
+   $('.ex4 div').addClass('tt')
+  })
+
+div가 수직으로 된 이유 
+block이라서 
+block을 inline-block으로 바꿔준다.(display)
+
+----------------------------
+값을 하나밖에 못 넣음 변수
+여러가지 값을 넣을 수 있는 객체
+
+조건문
+$(document).ready(function(){
+})
+
+비동기 document ready 이벤트의 줄임말 
+$(function(){
+})
+
+스코프 범위 정해서 하려고
+
+this 
+attr 메소드
+
+값은 무조건 하나만 나온다. (정확히 하나만 해야 한다.)
+
+ $('.ex1 button').click(function(){
+     var n = $(this).val()
+})
+$(this) this를 찾는다.
+미리 정해진 예약어
+이벤트 타깃 (이벤트 대상)
+클릭한 대상을 찾는다.
+이벤트 횟수를 비약적으로 줄일 수 있다.
+this는 콜백함수 안에서만 사용할 수 있다. 
+
+이벤트 바인딩을 줄이기 위한 목적!
+
+속성을 만든다.(html5부터)
+data-
+사용자 지정 속성
+
+<section class="ex1">
+    <p>1. 클릭한 버튼의 숫자(1 one,2 two,3 three)가 출력되요</p>
+    <button value="1" data-n="one">하나</button>
+    <button value="2" data-n="two">둘</button>
+    <button value="3" data-n="three">셋</button>
+  </section>
+
+속성 값을 찾는 명령어
+attr('')
+
+$('.ex1 button').click(function(){
+    var 숫자 = $(this).val()
+    var 알파벳 = $(this).attr('data-n')
+    alert(`${숫자}, ${알파벳}`)
+  })
+
+var()
+밸류 값을 찾겠다.
+
+내장함수 메소드
+사용자함수
+
+function fn1(el){
+    var 숫자 = el.val()
+    var 알파벳 = el.attr('data-n')
+    alert(`${숫자} , ${알파벳}`)
+  }
+
+  $('.ex1 button').click(function(){
+    fn1($(this))
+  })
+
+
+막코딩, 잡코딩
+리팩토리 
+코딩 정리
+
+ $('.ex2 button').click(function(){
+
+    $(this).css({'color':'#F00'})
+    $('.ex2 button').not($(this)).css({'color':'#000'})
+  })
+
+not() ~빼고
+
+같은 목적으로 쓰기 때문에 data- 이름이 같아야 한다.
+같은 속성을 쓰기 때문에
+
+$(this).text()
+클릭한 애 글자를 가져오겠다.
+text는 열고 닫는 태그에서만 사용
+
+----------------------------
+객체명에 ``는 못씀
+.not($()) 
+
+형제 찾기 
+.next() 뒤쪽 동생을 찾아라, 오로지 하나
+
+this를 기준으로 해서 동생을 찾는 거
+node 찾기(족보를 찾는다.)
+
+.prev() 이전, 앞쪽
+
+$(this).prevAll('') 앞쪽에 있는 애들
+
+.prevAll('') ''생략가능 
+
+
+작은 앱을 만들 때 리액트 사용
+
+$('.ex3 .cont1 div').css({'background':`none`})
+전체가 다
+
+class 명령어는 항상 css를 먼저 만들고 만든다.
+유지 관리가 힘들어서 class 명령어를 사용한다.
+수정관리, 코드를 줄이려고 사용.
+
+
+box-shadow
+그림자의 
+가로 길이 10px, 세로 길이 10px, 사이즈(불러) 부드럽게 퍼지는 정도 
+
+
+  $('.ex3 .cont1 div').click(function(){
+    $('.ex3 .cont1 div').css({'background':`none`})
+    $(this).css({'background':`red`})
+    $(this).prevAll('div').css({'background':`red`})
+  })
+
+한개의 스타일 적용시 css 속성을 사용         
+여러 스타일 적용시 class 명령어 사용     
+
+
+$('.ex3 .cont1 div').click(function(){
+    $('.ex3 .cont1 div').removeClass('t')
+    $(this).addClass('t')
+    $(this).prevAll('div').addClass('t')
+  })
+
+
+토글 -온오프, 껐다 켰다
+반대로 되는 것. 
+
+토글할 때는 전부 다 끄면 안 된다.
+토글하는 애는 빼고 꺼야 한다.
+
+활성화, 비활성화
+1.토글 클래스일 때는 절대로 다 끄면 안 된다.
+2.토글이라는 명령어.
+
+addclass, css
+토글할 목적이 없을 때 전부 다 끈다.
+
+----------------------------
+순서가 중요!!
+
+css 속성은 딱 하나 사용할 때, 또는 연속적으로 계속 변해야 할 때 사용한다.
+
+토글은 무조건 toggleClass를 사용해야 한다.
+순서를 정해야 한다.
+
+공동체, 대화
+커뮤니티
+사람들이 쓰는 관습
+
+active 활성화 시킬 때 관례로
+
+
+this는 예약어로 변수로 사용 못함
+
+구조화하는 습관을 들여야 한다.
+
+$(this).siblings('button')
+siblings 형제들을  찾는다.
+
+키이름에는 변수를 바로 받지 못한다.
+변수를 사용하고 싶으면 []대괄호를 사용한다.
+
+파라미터가 많으면 객체로 묶어서 사용한다.
+객체로 사용하면 파라미터 갯수 다르게 받을 수 있다.
+객체를 묶어서 파라미터로 사용
+
+$(this).parent()
+부모는 유일무이한 존재.
+.parent()-> ()안에 아무것도 적지 않는다.
+
+----------------------------
+랜덤
+Math.random()*3
+Math.floor() 소수점 내림, 내장함수 
+ceil() 
+
+파싱
+시작하자마자 할 일. ready
+
+연산자 
+비교 연산자는 결과값이 true, false만 나온다
+true
+false
+
+===같다
+!==다르다
+
+(input === calc)? true : false //삼항연산자
+(조건)?참일때값:거짓일때값
+비교 연산자를 이용해서 값을 리턴해주는 것.
+
+.css
+inline style이기 때문에.
+
+----------------------------
+면접볼 때 코딩 테스트 봄
+$('span[name=kor]').attr('data-type')
+
+$(document).ready(function(){})
+html문서를 parsing(다 읽는다) 후 자바스크립트를 실행하는 비동기 이벤트 바인딩.
+비동기 문법 
+엘리먼트를 찾기 위해 사용
+구조적으로 분할해서 스크립트 관리를 위해 
+효율성
+스크립트를 먼저 적기 위해서 사용함.
+랜더링
+
+
+콜백함수  : 이게 끝나고 났을 때.
+이벤트와 연동하기 위해서
+이벤트 바인딩
+
+이벤트 바인딩 하는 방법 두 가지.
+
+$('.ex1 button').click(function(){
+  })
+$('.ex1 button').bind('click',function(){
+      })
+
+
+$('.ex1 button') 쿼리 셀렉터라고 한다.
+document.querySelector()
+
+.val() 폼요소에서만 값을 가져올 수 있다.
+value 사용자가 입력할 수 없을 때 value를 넣어준다.
+초기값을 입력하고 싶을 때 사용하기도 한다.
+
+
+ $('.ex1 p').html('tt<br>')
+태그를 넣고 싶을 때 .html사용
+
+
+반복되는 코드를 함수로 정리한다.
+리팩토링 코드 정리한다.
+
+이벤트는 여러가지를 찍어도 상관 없음.
+그런데 값은 꼭 하나만 가져와야 함.(.val(), .text())
+
+인자, 파라미터
+
+function fn1(param){
+    var 첫번째수 = parseInt($('.ex1 article:'+param+'-child input:first-child').val())
+일반 따옴표 사용시 '+param+' 이렇게 변경한다.
+
+    var 두번째수 = parseInt($(`.ex1 article:${param}-child input:last-of-type`).val())
+    var 결과 = 첫번째수 + 두번째수
+    $(`.ex1 article:${param}-child p`).text(결과)
+  }
+빽틱 `` 사용시 ${param} 이렇게 변경한다.
+
+
+에러 나면 log 확인해 보고 안 되면 선생님 부르기...
+
+언제(이벤트), 무엇(요소, 변수)을 이용해서, 어떤 일을 할지 생각 후에 막코딩을 하고 함수를 만든다.
+
+이벤트 횟수를 줄이는 거 이벤트 타겟 $(this)
+
+$(this).val()
+클릭한 버튼의 value 값이 나온다.
+
+
+.text() 출력하고 싶다.
+
+this는 콜백함수 안(이벤트 함수)에서만 사용할 수 있다.
+
+이벤트가 다르면 줄일 수가 없다. (하나로 묶을 수 없다)
+
+----------------------------
+this를 사용해서 컨테이너 영역을 잡을 수 있다. (특정한 값을 줄 수 있다)
+
+click은 마우스 이벤트이다.
+
+`.ex2 input[type=radio]` 인풋타입 라디오 선택
+
+input이 많아질 경우 부모요소인 article에 data-를 넣는다.
+
+
+    var 컨테이너번호 = $(this).parent().attr('data-cont') //this - 선택이 바뀐 애
+    var 상품가격 = parseInt($(`.ex2 .cont${컨테이너번호} input[type=radio]:checked`).val())
+    var 상품갯수 = parseInt($(`.ex2 .cont${컨테이너번호} input[type=number]`).val())
+    var 총가격 = 상품갯수 * 상품가격
+    $(`.ex2 .cont${컨테이너번호} p`).text(총가격) 
+
+
+
+    총가격 값을 구하기 위해 상품가격값과 갯수값이 필요하다.
+    이벤트(change, bind('input')는 다르지만 결국 할일은 똑같기 때문에 함수는 1개만 사용
+    */ 
+
+css ({:}) 객체를 받는다 {'':} 객체 키값으로는 빽틱이 안 된다.
+변수도 안 된다.
+객체 키값은 문자열로 적는다. ''
+
+전부 리젯을 한다.
+
+폼요소에만 value="" 사용한다.
+div 안에는 data- 속성을 사용한다.
+.text() 글자를 가져온다.
+
+
+
+3월2일 코딩 시험봄...(스크립트..)
+시험볼 때 주석까지 달아야 한다.
+주석다는 습관...
+이해 못하면 외우기..
+스크립트는 스스로 작성하면서 복습하기
+
+
+
+오늘한 거 
+4번부터 문제 풀기.. 변형되서 시험 봄.
+
+----------------------------
+태그 사이에 있는 글자 가져올 때 .text() 또는 .html() 사용해야 함
+
+toggleClass, toggle 명령어에만 전부 다 초기화하면 안 된다.
+
+.parents() 조상을 찾음 ('')에 넣어야 함
+$(this).parents('article')
+부모의 이름을 꼭 줘야한다 겹치지 않는 이름으로
+  //(태그를 적는 건 위험하기 때문에 범위를 축소해야 한다)
+  //함부로 쓰면 안 된다 겹치면 해당되는 조상을  다 찾는다 
+
+
+.find() 손주까지 다 찾음 (자손)
+.find('button')
+
+바닐라는 리액트할 때만 사용해야 한다.
+node가 별로 없다
+
+.ex10 div{
+  display: none;
+}
+display:none;도 있다
+css에서 일단 안 보이게 설정한다.
+
+
+toggleClass, toggle 이 두 개만 not을 사용해야 한다!!
+
+show(), hide()
+----------------------------
+모양 바꾸는 명령어 css
+class
+
+$(this).children(`div`).slideDown() 
+
+.slideDown() 접이식, 아코디언 위에서 아래로 펼쳐진다
+.slideUp()
+
+
+$(`.ex3 .box`).click(function(){
+    $(`.ex3 .box div`).slideUp()
+    $(this).children(`div`).stop().slideDown() 
+    //.slideDown() 접이식, 아코디언 위에서 아래로 펼쳐진다
+    //.slideUp() 반대
+    /* 천천히 변하는 걸 애니메이션 효과
+    스택이 쌓인다. 애니메이션 효과가 쌓인다 */
+  }) 
+
+천천히 변하는 애들, 애니메이션 효과 마지막 행동만 하도록 .stop()을 넣어야 한다!!
+
+.slideToggle() 열었다가 닫는 기능
+
+
+$(this).find(`div`).fadeIn()
+
+slide와 마찬가지로 천천히 변하는 애들, 애니메이션 효과 마지막 행동만 하도록 .stop()을 넣어야 한다!!
+
+.fadeToggle()
+
+
+모양, 스타일 제어하는 명령어
+css,
+addClass, removeClass, toggleClass
+show, hide, toggle
+slideDown, slideUp, slideToggle
+fadeIn, fadeOut, fadeToggle
+
+초기화할 때 조심할 것 toggleClass, toggle
+
+lorem ipsum - 쓸말이 없을 때 구글에서 찾아보면
+
+cursor: pointer;
+마우스 커서 바뀜
+
+
+:not(.pane1) 가상클래스 not
+
+<a href="#">남성의류</a>
+#임시 링크
+
+
+1depth 뎁스 깊이..
+2뎁스 이상은 안 좋다
+
+
+$(`.menu>ul>li>a`).click(function(event){
+
+  })
+
+
+연산자
+(+ - * /)
+
+비교 연산자 
+
+
+비교 연산자 종류
+  === 같다  !== 다르다 >크다 <작다 >=이상이다 <=이하이다
+  
+  비교 연산자 결과로는 true false만 반환한다
+  결과는 true 아니면 false만 나온다 (불린값)
+
+
+조건문
+반복문
+  
+  (2===2)범위 설정 true가 나옴
+  !(2===2) 반대 결과가 나옴 true, false를 뒤집는 연산자(비교연산자는 아님)
+
+  논리연산자 종류 (비교 연산자를 두개 이상 사용할 경우 논리연산자로 연결한다)
+  $$(and, 면서) 모든 비교연산이 true일 경우 최종 true
+  ||(or, 또는) 비교연산 하나가 true이면 최종 true
+
+
+if(true나 false를 넣는다 또는 true나 false가 되는 값을 넣는다,컨디션이라고함){
+
+}
+if문
+
+/* if(n > 0){
+      $(`.ex1 .output`).text('정답')
+    }else{
+      $(`.ex1 .output`).text('오답')
+    }//true일 때는 if문이 실행되고 false일 때 else가 실행된다 */
+
+NaN -Not a Number
+
+if 뒤에만 ( )적는다
+
+----------------------------
+NaN  log에 파란 글씨로 뜨면 숫자
+'NaN' 빨간 글씨면 글자
+NaN 검은 글씨면 글자
+
+괄호를 논리연산자가 and와 or가 섞여 있을 때 사용(범위를 잡아준다)
+
+
+Math.ceil 반올림
+
+중첩조건
+
+
+문제 힌트
+입력오류 유효성검사하기
+빈칸이 들어가거나 글자가 들어가면 안 된다
+나누기할 때 뒷 숫자가 0이 되면 안 된다
+
+----------------------------
+조건문과 삼항연산
+
+regExp 정규 표현식 <-제대로된 유효성 검사
+
+.ex1 select option:selected
+
+
+증감연산
+숫자가 증가나 감소 - 증감연산
+변수 기본값이 있어야 한다 반드시 필요하다
+증감연산 무조건 변수 초기값이 있어야 한다
+변수 선언은 시점을 잘 찾아야 한다
+
+ $(`.ex1 button`).click(function(){
+   /*  n ++ //1씩 증가한다 n += 1과 같은 식 */
+    ++n
+    if(n > 5) n = 5 //증감하고 검사하고 사용한다의 순서다!
+    $(`.ex1 .output`).text(n)
+  })
+
+
+----------------------------
+증감연산자 캐러젤(회전목마)
+
+a = n ++ 
+n이 먼저 실행된 후에 증가
+
+++n 증가한 결과를 실행(호출)
+ 
+return할 때 조심해야 한다
+
+
+----------------------------
+비동기 
+~하고 난 후에 행동
+
+setTimeout(function(){},1000)
+<-특정시간 후에 실행되는 것(비동기)
+
+스택이 쌓인다 -> 버튼을 누른 만큼 그 행동을 다하는 것
+스택이 쌓이는 게 문제임 
+
+.css({'left':`${x}px`})
+       키값 : 키밸류
+
+<<<<<<< HEAD
+----------------------------
+스크립트에서 
+토글할 일이 없을 때 css속성 사용
+css 속성 딱 하나만 변경할 때 css속성 사용
+동일한 속성이 계속 바뀔 때 사용
+
+
+
+each 각각
+
+each 이벤트
+엘리먼트의 숫자만큼 반복해서 발생하는 이벤트
+
+=======
+>>>>>>> parent of eddb797 (3월10일 script)

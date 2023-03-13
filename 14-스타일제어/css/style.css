@@ -1,0 +1,58 @@
+section div{
+  display: inline-block;
+  vertical-align: middle;
+  width: 50px;
+  height: 50px;
+  border: 1px solid black;
+}
+
+.ex2 div.active{
+  background: red;
+  color: #FFF;
+  border-radius: 50%;
+  text-align: center;
+  line-height: 50px;
+}
+
+.ex4 button.active{
+  color: red;
+}
+
+.ex6 button.active{
+  color: red;
+}
+.ex7 button.active{
+  color: red;
+}
+
+.ex8 button.active{
+  color: red;
+}
+
+.ex10 div{
+  display: none;
+}
+.ex11 div{
+  display: none;
+}
+
+.ex12 div.active1{
+  background: red;
+}
+.ex12 div.active2{
+  background: blue;
+}
+.ex12 div.active3{
+  background: green;
+}
+
+.ex13 .box1.active{
+  background: red;
+}
+
+.ex13 .box2.active{
+  background: blue;
+}
+.ex13 .box3.active{
+  background: green;
+}
