@@ -14,9 +14,9 @@ body{
   transition: all 0.3s;
 }
 
-.banner1{
+/* .banner1{
   
-}
+}  transform 안해도 됨 */
 
 .banner2{
   transform: translateX(-50%);
