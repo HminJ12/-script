@@ -1,0 +1,51 @@
+body{
+  margin: 0;
+}
+.dummy{
+  height: 3000px;
+  width: 3000px;
+  background: #CCC;
+}
+.banner{
+  position: absolute;
+  width: 100px;
+  height: 200px;
+  background: red;
+  transition: all 0.3s;
+}
+
+.banner1{
+  
+}
+
+.banner2{
+  transform: translateX(-50%);
+}
+
+.banner3{
+
+  transform: translateX(-100%);
+}
+.banner4{
+  transform: translate(-100%, -50%);
+}
+.banner5{
+
+  transform: translate(-50%, -50%);
+}
+
+.banner6{
+
+  transform: translateY(-50%);
+}
+.banner7{
+  transform: translateY(-100%);
+}
+
+.banner8{
+  transform: translate(-50%, -100%);
+}
+
+.banner9{
+  transform: translate(-100%, -100%);
+}

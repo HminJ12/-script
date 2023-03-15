@@ -1303,5 +1303,31 @@ each 각각
 each 이벤트
 엘리먼트의 숫자만큼 반복해서 발생하는 이벤트
 
-=======
->>>>>>> parent of eddb797 (3월10일 script)
+----------------------------
+scroll이벤트 resize이벤트
+
+웹사이트를 동적으로 만드는 이벤트
+
+scroll이벤트는 scroll이 발생하는 동안 일어나는 이벤트
+
+resize이벤트는 (window)창 사이즈가 변할 때마다 생기는 이벤트
+
+$(window).scrollTop() -> 문서가 올라간 거리
+$(window).scrollLeft() -> 문서가 좌우로 움직인 거리
+
+$(window) ->웹브라우저를 window라고 한다
+$(window).height() ->웹브라우저 높이
+$(window).width() ->웹브라우저 넓이
+
+$(window).scroll(function(){}).resize(function(){})
+$(window) 이벤트 대상이 같기 때문에 이벤트를 붙여서 사용가능함
+
+
+requestAnimationFrame()
+연속으로 발생하는 이벤트를 최적화 시키는 것
+아이디를 부여해야 함(var raf ->부여할 빈 박스를 미리 만든다)
+
+
+ 값이 자꾸 변하는 것은 addClass를 주는 것이 아니라 css속성을 이용한다. 
+.css({'':``})
+
