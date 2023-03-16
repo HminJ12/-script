@@ -1,0 +1,23 @@
+body{
+  margin: 0;
+}
+
+.box1{
+  width: 100px;
+  padding: 30px;
+  background: #CCC;
+}
+
+.line{
+  position: fixed;
+  width: 100%;
+  border-bottom: 1px solid red;
+}
+
+.line1{
+  top: 70%;
+}
+.line2{
+  top: 30%;
+}
+
