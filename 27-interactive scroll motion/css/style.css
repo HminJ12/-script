@@ -1,0 +1,239 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.ex1{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 1px solid #000;
+  transition: all 0.5s;
+  text-align: center;
+  line-height: 100px;
+  background: red;
+  border-radius: 50%;
+}
+
+/* 모션 */
+.ex1{
+  border-radius: 0;
+  opacity: 0;
+  background: #FFF;
+  transition: all 0.5s;
+}
+
+.ex1.active{
+  border-radius: 50%;
+  background: red;
+  opacity: 1;
+}
+
+.ex2{
+  width: 100px;
+  height: 100px;
+  margin: 0 auto;
+  border: 1px solid red;
+}
+
+.ex2 div{
+  width: 100px;
+  height: 100px;
+  background: yellow;
+}
+
+/* motion */
+.ex2 div{
+  opacity: 0.1;
+  transition: all 1s;
+}
+
+.ex2.active div{
+  opacity: 1;
+  transform: translateY(200px); 
+} 
+/* active는 큰 객체에게 부여한다 
+ex2는 고정되어 있고 div는 값이 변하기 때문에*/
+
+.ex3{
+  display: flex;
+  flex-wrap: wrap;
+  width: 50%;
+  margin: 0 auto;
+  max-width: 300px;
+}
+
+.ex3 div{
+  height: 100px;
+}
+
+.ex3 div div{
+  height: 100px;
+  background: red;
+}
+
+@media screen and (min-width:1000px) {
+  .ex3 div{
+    flex: 1;
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width:1000px) {
+  .ex3 div{
+    width: 100%;
+    margin: 50px 0;
+  }
+}
+
+/* ex3 모션 */
+.ex3 >div >div{
+  transform: scale(0.1);
+  transition: all 1s;
+}
+.ex3 >div.active >div{
+  transform: scale(1);
+}
+
+
+/* ex4 많이 사용하는 레이아웃, 
+padding으로 이용해 간격 맞추기 좋다*/
+.ex4{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 50%;
+  max-width: 300px;
+  margin: 0 auto;
+  border: 1px solid black;
+}
+
+.ex4>div{
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid red; 
+  /* 간격을 margin 대신 padding으로 사용한다 
+  여백처럼 보이게 한다
+  여기가 기준점이다*/
+}
+.ex4>div>div{
+  background: green;
+} /* 모션 적용은 여기에 */
+
+@media screen and (min-width:600px) {
+  .ex4>div{
+    width: 33.333%;
+  }
+  .ex4>div>div{
+    height: 200px;
+  }
+}
+
+@media screen and (max-width:600px) {
+  .ex4>div{
+    width: 100%;
+  }
+  .ex4>div>div{
+    height: 100px;
+  }
+}
+
+/* ex4 모션 */
+.ex4>div>div{
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s, transform 0.5s; /* all은 안 된다 */
+}
+.ex4>div.active>div{
+  opacity: 1;
+  transform: scale(1);
+} /* active 나타날 때 */
+
+.ex5{
+  text-align: center;
+  font-size: 3em;
+}
+.ex5 span{
+  display: inline-block; /* inline에는 transform이 적용이 안 돼서 inline-block으로 한다 */
+  transform: scale(0);
+  transition: all 0.5s;
+}
+
+.ex5 span.active{
+  transform: scale(1);
+}
+
+.ex5 span.active:nth-child(2){
+  transition-delay: .2s;
+}
+.ex5 span.active:nth-child(3){
+  transition-delay: .4s;
+}
+.ex5 span.active:nth-child(4){
+  transition-delay: .6s;
+}
+.ex5 span.active:nth-child(5){
+  transition-delay: .8s;
+} 
+/* 나타날 때만 적용해야 delay가 꼬이지 않는다 */
+
+
+.ex6{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ex6>div{
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+.ex6>div>div{
+  height: 100px;
+  background: yellow;
+}
+
+@media screen and (min-width:1000px) {
+  .ex6>div{
+    width: 33.33%;
+  }
+  .ex6>div.active:nth-child(3n+2)>div{
+    transition-delay: .2s;
+  }
+  .ex6>div.active:nth-child(3n+3)>div{
+    transition-delay: .4s;
+  }
+} /* 1000이상 lg */
+
+@media screen and (min-width:500px) and (max-width:1000px) {
+  .ex6>div{
+    width: 50%;
+  }
+  .ex6>div.active:nth-child(2n+2)>div{
+    transition-delay: .2s;
+  }
+} /* 500이상 1000이하 md */
+
+@media screen and (max-width:500px) {
+  .ex6>div{
+    width: 100%;
+  }
+} /* 500이하 sm */
+
+/* 작아졌다 커지게 하기 opacity랑 scale 
+미디어쿼리에 나눠서 주기 delay 왼쪽 나오고 오른쪽 나오게 하기
+nth-child (An +b) 이용하기 */
+
+.ex6>div>div{
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.5s, transform 0.5s;
+}
+
+.ex6>div.active>div{
+  opacity: 1;
+  transform: scale(1);
+}
