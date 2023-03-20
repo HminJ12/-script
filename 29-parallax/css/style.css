@@ -1,0 +1,37 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+
+.ex1{
+  overflow: hidden;
+  padding: 50px 0;
+  background: blue;
+}
+
+.ex1 .car{
+  margin: 0 auto;
+  width: 200px;
+  height: 150px;
+  background: red;
+}
+
+.ex2, .ex3{
+  width: 200px;
+  height: 200px;
+  margin: 0 auto;
+  background: green;
+}
+
+.ex4>div{
+  width: 200px;
+  height: 200px;
+  margin: 100px auto;
+  border: 1px solid red;
+}
+
+.ex4>div>div{
+  width: 200px;
+  height: 200px;
+  background: yellow;
+}
