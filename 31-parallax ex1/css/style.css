@@ -1,0 +1,51 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+
+.ex1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ex1 li{
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+}
+.ex1 li figure{
+  position: relative;
+  padding-top: 100%; /* li의 넓이 */
+}
+
+.ex1 li img{
+  display: block;
+  width: 100%;
+}
+
+@media screen and (min-width:1000px) {
+  .ex1 li{
+    width: 33.333%;
+  } 
+} /* lg */
+@media screen and (max-width:1000px) {
+  .ex1 li{
+    width: 100%;
+  } 
+} /* sm */
+
+.ex1 li{
+  opacity: 0.1;
+  transition: opacity 1s;
+  
+}
+
+.ex1 li.active{
+  opacity: 1;
+}

@@ -1,0 +1,117 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+
+.ex1{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ex1 li{
+  overflow: hidden;
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+.ex1 li img{
+  display: block;
+  filter: grayscale(1) brightness(.3);
+  width: 100%;
+  transition: filter 0.3s;
+} 
+/* inline-block이라 li 배경색이 보임 그래서 block으로 변경
+transform 사용할 거면 transition all 하면 안 됨 
+(변화가 계속 일어나는 parallax 사용할 때는 바로 반영이 안 됨)*/
+.ex1 li figure{
+  transition: all 0.3s;
+}
+
+.ex1 li figure:hover{
+  transform: scale(1.2);
+}
+.ex1 li img:hover{
+  filter: grayscale(0) brightness(1);
+}
+
+
+@media screen and (min-width:1000px) {
+  .ex1 li{
+    width: 33.333%;
+  } 
+} /* lg */
+@media screen and (min-width:500px) and (max-width:1000px) {
+  .ex1 li{
+    width: 50%;
+  } 
+} /* md */
+@media screen and (max-width:500px) {
+  .ex1 li{
+    width: 100%;
+  } 
+} /* sm */
+
+
+/* ex1 motion */
+.ex1 li{
+  opacity: 0.1;
+  transition: opacity 1s;
+}
+
+.ex1 li.active{
+  opacity: 1;
+}
+
+
+/* ex2 */
+
+.ex2{
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.ex2 li{
+  box-sizing: border-box;
+  padding: 10px;
+  border: 1px solid red;
+}
+.ex2 li figure{
+  position: relative;
+  padding-top: 100%; /* li의 넓이 */
+}
+.ex2 img{
+  position: absolute;
+  width: 100%;
+  height: 100%;  
+  object-fit: cover;
+  object-position: center;
+  top: 0;
+
+}
+
+@media screen and (min-width:1000px) {
+  .ex2 li{
+    width: 33.333%;
+  } 
+} /* lg */
+@media screen and (min-width:500px) and (max-width:1000px) {
+  .ex2 li{
+    width: 50%;
+  } 
+} /* md */
+@media screen and (max-width:500px) {
+  .ex2 li{
+    width: 100%;
+  } 
+} /* sm */
+
+/* 정사각형에서 동그라미로 */
