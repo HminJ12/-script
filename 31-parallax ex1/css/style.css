@@ -2,50 +2,47 @@
   margin: 0;
   padding: 0;
 }
-li{
-  list-style: none;
-}
-
-.ex1{
+ul{
   display: flex;
-  flex-wrap: wrap;
   width: 90%;
   max-width: 1000px;
-  margin: 0 auto;
+  margin: 2000px auto;
 }
-
-.ex1 li{
-  overflow: hidden;
+li{
+  list-style: none;
   box-sizing: border-box;
-  padding: 10px;
+  padding: 40px;
+  border: 1px solid red;
 }
-.ex1 li figure{
+
+figure{
   position: relative;
-  padding-top: 100%; /* li의 넓이 */
-}
+  padding-top: 100%;
+  border: 3px solid #000;
+  overflow: hidden;
+} /* 스크롤 위치에 따라서  */
 
-.ex1 li img{
-  display: block;
+img{
+  position: absolute;
   width: 100%;
+  height: 100%; /* absolute 때문에 높이 주는 게 가능 */
+  top: 0;
+  transition: all 0.3s;
 }
 
-@media screen and (min-width:1000px) {
-  .ex1 li{
-    width: 33.333%;
-  } 
-} /* lg */
-@media screen and (max-width:1000px) {
-  .ex1 li{
-    width: 100%;
-  } 
-} /* sm */
-
-.ex1 li{
-  opacity: 0.1;
-  transition: opacity 1s;
-  
+img:hover{
+  transform: scale(1.3);
 }
 
-.ex1 li.active{
-  opacity: 1;
+@media screen and (min-width:900px) {
+  li{
+    flex: 1;
+  }
+}
+@media screen and (max-width:900px) {
+  ul{
+    /* flex-direction: column; 한줄로 세우는 방법이 두가지 방법이 있다 */
+    display: block;
+    max-width: 500px;
+  }
 }

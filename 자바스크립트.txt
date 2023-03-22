@@ -1464,7 +1464,38 @@ paralla는 즉각반응이어서 transiton 하지 알아라.
 
 크기 변화에 따라서 어떤 애를 쓸지 선택해야 한다.
 
+----------------------------
+
+0에서 1 사이는 조금 곱해야 하고 (ex) 0.001
+0에서 50 사이는 0.1 곱하면 된다
 
 
 
+Math.abs
 
+자바스크립트는 미디어 쿼리로 못 나눈다.
+
+css에서 !important로 영향을 안 받는다고 표시해야 함
+
+height: 100% !important;
+
+
+스크립트로 미디어쿼리를 제어하는 방법
+
+미디어쿼리는 스크롤바까지 넓이가 포함되어 있다
+
+스크립트에서 미디어쿼리 분기
+
+    if(window.matchMedia('(min-width:700px)').matches){
+      $(`div`).css({
+        'width':`${meta}%`,
+        'height':`100%`
+      })
+    }else{
+      $(`div`).css({
+        'width':`100%`,
+        'height':`${meta}%`
+      })
+    }
+
+if(window.matchMedia('screen and (min-width:700px)').matches){

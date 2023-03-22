@@ -1,0 +1,55 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+html, body{
+  height: 100%;
+}
+body{
+  background: #000;
+}
+section{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  height: 100%;
+  background: #FFF;
+}
+
+.left, .right{
+  position: absolute;
+}
+
+.left{
+  background: yellow;
+}
+.right{
+  background: pink;
+}
+
+@media screen and (min-width:700px) {
+  .left, .right{
+    /* height: 100% !important; */
+    /* width: 30%; */
+  }
+  .left{
+    left: 0;
+  }
+  .right{
+    right: 0;
+  }
+} /* lg */
+@media screen and (max-width:700px) {
+  .left, .right{
+    /* width: 100% !important; */
+    /* height: 30%; */
+  }
+  .left{
+    top: 0;
+  }
+  .right{
+    bottom: 0;
+  }
+} /* sm */
