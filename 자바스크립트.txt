@@ -1499,3 +1499,40 @@ height: 100% !important;
     }
 
 if(window.matchMedia('screen and (min-width:700px)').matches){
+
+
+
+---------------------------------
+모션 스크롤 비율 
+비율구하기
+
+드래그 만드는 게 어렵다.
+
+% -> 0에서 1사이
+
+비율은 %
+
+비율공식
+최대 이동거리에서 현재 위치를 나누는 것을 비율이라고 한다.
+
+스크롤버튼의 현재위치 / 스크롤버튼의 최대 이동거리
+
+전체 이동량에서 현재 값을 나누면 된다.
+
+
+ui draggable
+
+$().draggable()
+
+
+containment는 문서의 절대 위치인 문서 기준이다
+
+
+cursor : move
+cursor : grab
+cursor : grabbing
+
+
+비율을 구해서 다른 대상을 제어하는 것
+
+

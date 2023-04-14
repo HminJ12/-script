@@ -1,0 +1,138 @@
+@charset "UTF-8";
+.container {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  border: 5px solid #000;
+}
+.container .wrap {
+  display: flex;
+  width: 1200px;
+  height: 300px;
+}
+.container .wrap div {
+  width: 300px;
+  height: 300px;
+}
+.container .wrap div:nth-child(1) {
+  background: green;
+}
+.container .wrap div:nth-child(2) {
+  background: yellow;
+}
+.container .wrap div:nth-child(3) {
+  background: red;
+}
+.container .wrap div:nth-child(4) {
+  background: blue;
+}
+
+.scrollbar {
+  width: 300px;
+  height: 30px;
+  margin: 50px auto;
+  background: #CCC;
+}
+.scrollbar .scrollbtn {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: greenyellow;
+  cursor: pointer;
+}
+
+.container2 {
+  overflow: hidden;
+  width: 300px;
+  height: 300px;
+  margin: 30px auto;
+  cursor: grab;
+  /* 프레스하는 동안 */
+}
+.container2:active {
+  cursor: grabbing;
+}
+.container2 .wrap2 {
+  display: flex;
+  width: 1200px;
+  height: 300px;
+}
+.container2 .wrap2 div {
+  width: 300px;
+  height: 300px;
+}
+.container2 .wrap2 div:nth-child(1) {
+  background: green;
+}
+.container2 .wrap2 div:nth-child(2) {
+  background: yellow;
+}
+.container2 .wrap2 div:nth-child(3) {
+  background: red;
+}
+.container2 .wrap2 div:nth-child(4) {
+  background: blue;
+}
+
+.scrollbar2 {
+  width: 300px;
+  height: 30px;
+  margin: 50px auto;
+  background: #CCC;
+}
+.scrollbar2 .scrollbtn2 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: greenyellow;
+  cursor: pointer;
+}
+
+.container3 {
+  overflow: hidden;
+  width: min(90%, 500px);
+  height: 300px;
+  margin: 30px auto;
+  cursor: grab;
+  /* 프레스하는 동안 */
+}
+.container3:active {
+  cursor: grabbing;
+}
+.container3 .wrap3 {
+  display: flex;
+  width: 400% !important;
+  /* %로 주면 ui가 자동으로 바뀐다, 그래서 강제로 important를 해야 한다 */
+  height: 300px;
+}
+.container3 .wrap3 div {
+  width: 25%;
+  height: 300px;
+}
+.container3 .wrap3 div:nth-child(1) {
+  background: green;
+}
+.container3 .wrap3 div:nth-child(2) {
+  background: yellow;
+}
+.container3 .wrap3 div:nth-child(3) {
+  background: red;
+}
+.container3 .wrap3 div:nth-child(4) {
+  background: blue;
+}
+
+.scrollbar3 {
+  width: min(80%, 300px);
+  height: 30px;
+  margin: 50px auto;
+  background: #CCC;
+}
+.scrollbar3 .scrollbtn3 {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  background: greenyellow;
+  cursor: pointer;
+}/*# sourceMappingURL=style.css.map */
