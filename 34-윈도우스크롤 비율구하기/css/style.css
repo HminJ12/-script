@@ -1,0 +1,47 @@
+.scrollspy1 {
+  position: fixed;
+  left: 50px;
+  top: calc(50% - 100px);
+  width: 5px;
+  height: 200px;
+  background: #CCC;
+}
+.scrollspy1 .progress {
+  background: greenyellow;
+}
+.scrollspy1 .circle {
+  position: absolute;
+  left: -7px;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background: green;
+  transform: translateY(-50%);
+}
+
+.scrollspy2 {
+  position: fixed;
+  right: 50px;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 40px;
+}
+.scrollspy2 svg {
+  display: block;
+  width: 100%;
+}
+.scrollspy2 svg .path1 {
+  fill: none;
+  stroke: #EEE;
+  stroke-width: 10px;
+}
+.scrollspy2 svg .path2 {
+  fill: none;
+  stroke: red;
+  stroke-width: 10px;
+  stroke-dasharray: 1px;
+}
+.scrollspy2 svg circle {
+  fill: red;
+  offset-path: path("M17.61,19.52c0,0,11.25,0,25,0s25,11.25,25,25s-11.25,25-25,25s-25,11.25-25,25s11.25,25,25,25s25,11.25,25,25 s-11.25,25-25,25s-25,11.25-25,25s11.25,25,25,25s25,11.25,25,25c0,13.75-11.25,25-25,25s-25,11.25-25,25s11.25,25,25,25 s25,11.25,25,25s-11.25,25-25,25s-25,11.25-25,25s11.25,25,25,25s25,0,25,0");
+}/*# sourceMappingURL=style.css.map */

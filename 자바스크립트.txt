@@ -1535,4 +1535,50 @@ cursor : grabbing
 
 비율을 구해서 다른 대상을 제어하는 것
 
+---------------------------------
+window scroll 비율 구하기
+
+공식
+
+0에서 1 -> %
+
+scrollTop 
+
+스크롤 스파이
+
+document height에서 브라우저 높이를 뺀다 -> 스크롤 가능 범위
+
+스크롤이 실제 일어난 거리 -> scrollTop
+
+0에서 1 비율 구하는 공식
+공식 = 스크롤 거리 / 스크롤 가능 범위
+
+svg는 넓이를 주면 알아서 높이를 가진다.
+
+
+sticky scroll
+
+스티키가 일어나는 구간
+
+sticky 시작점 = stickyContainer의 offsetTop
+
+sticky 종료점 = stickyContainer의 offsetTop + stickyContainer의 높이 - 창 브라우저의 높이(winH)
+
+sticky범위 = sticky종료점 - sticky시작점
+
+sticky비율 = scroll위치 / sticky범위 (0에서 1까지 나와야 한다)
+0에서 1까지 나오지 않아서 아래처럼 계산해야 한다.
+sticky비율 = (scroll위치(scrT) - sticky시작점) / sticky범위
+
+
+viewport : 화면, 브라우저 높이
+
+vh가 화면 높이의 100분의 1 단위
+
+100vh 화면 높이 100%
+
+vw 화면 넓이
+
+
+
 

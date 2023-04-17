@@ -1,0 +1,26 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+.sticky-container{
+  margin: 0 auto;
+  width: min(90%, 800px);
+  height: 500vh; //부모가 높이 없을 때 브라우저 기준으로 vh한다
+  border: 5px solid green;
+  .sticky{
+    position: sticky;
+    top: 0; //브라우저에 윗부분이 닿으면 시작
+    height: 100vh;
+    background: #EEE;
+    img{
+      display: none;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      &:nth-child(1){
+        display: block;
+      } //확인하려고 하는 거
+    }
+  }
+}
