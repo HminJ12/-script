@@ -1,0 +1,66 @@
+@charset "UTF-8";
+/* 커서 바꾸기 
+*{
+  cursor: url(../img/pencil.png) 0 40, auto;
+}
+
+*/
+button:hover,
+a:hover {
+  color: red;
+}
+
+body {
+  background: #FFF;
+}
+
+* {
+  cursor: none;
+}
+
+@media (hover: hover) {
+  .cur {
+    pointer-events: none;
+    mix-blend-mode: difference;
+    opacity: 0;
+    position: fixed;
+    z-index: 10000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid #FFF;
+    transform: translate(-50%, -50%);
+    transition: border-radius 0.5s, transform 0.5s;
+  }
+  .cur.active {
+    border-radius: 0;
+    transform: translate(-50%, -50%) rotate(720deg);
+  }
+  .cur.active::after {
+    border-radius: 0;
+  }
+  .cur::after {
+    content: "";
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #FFF;
+  }
+}
+.ex1 {
+  position: fixed;
+  width: 300px;
+  right: 0;
+  top: 0;
+  background: #eee;
+}
+
+.ex2 {
+  width: 300px;
+  height: 300px;
+  background: yellow;
+  margin: 300px auto;
+}/*# sourceMappingURL=style.css.map */
