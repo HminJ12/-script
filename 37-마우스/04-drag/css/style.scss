@@ -1,0 +1,23 @@
+*{
+  margin: 0;
+  padding: 0;
+}
+li{
+  list-style: none;
+}
+
+.wrap{
+  overflow: hidden;
+  margin: 50px auto;
+  width: 500px;
+  height: 200px;
+  border: 1px solid black;
+  p{
+    display: inline-flex;
+    height: 100%;
+    white-space: nowrap;
+    background: yellow;
+    cursor: move;
+    user-select: none; //글자 드래그 막는 거
+  }
+}
